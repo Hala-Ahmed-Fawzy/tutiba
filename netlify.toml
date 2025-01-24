@@ -12,4 +12,4 @@
   from = "/admin/part1.html"
   to = "/unauthorized"
   status = 200
-  condition = { Role = "vieweer" }
+  condition = { Role = "viewer" }

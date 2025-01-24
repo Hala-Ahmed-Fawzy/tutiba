@@ -8,8 +8,8 @@
     X-Frame-Options = "DENY"
 
     
-    [[redirects]]
+[[redirects]]
   from = "/admin/part1.html"
   to = "/unauthorized"
   status = 200
-  condition = { Role = "viewer" }
+  condition = { Role = "!viewer" }

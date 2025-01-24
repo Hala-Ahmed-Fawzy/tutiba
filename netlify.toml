@@ -9,7 +9,32 @@
 
     
 [[redirects]]
-  from = "/admin/part1.html"
+  from = "/part1/part1.html"
   to = "/unauthorized"
   status = 200
-  condition = { Role = "!viewer" }
+  condition = { Role = "!part1" }
+[[redirects]]
+  from = "/part2/part2.html"
+  to = "/unauthorized"
+  status = 200
+  condition = { Role = "!part2" }
+[[redirects]]
+  from = "/part3/part3.html"
+  to = "/unauthorized"
+  status = 200
+  condition = { Role = "!part3" }
+[[redirects]]
+  from = "/deo/deodorant.html"
+  to = "/unauthorized"
+  status = 200
+  condition = { Role = "!deo" }
+[[redirects]]
+  from = "/sensitive_skin/sensitive-damaged-skin.html"
+  to = "/unauthorized"
+  status = 200
+  condition = { Role = "!sensitive_skin" }
+[[redirects]]
+  from = "/stretch_marks/stretch-marks.html"
+  to = "/unauthorized"
+  status = 200
+  condition = { Role = "!stretch_marks" }

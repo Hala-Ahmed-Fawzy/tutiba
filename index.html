@@ -20,8 +20,6 @@
           <div id="auth-container">
             <button id="auth-button">Login</button>
           </div>
-       
-        </div>  
      
     </article>
 <!-- The overlay navbar -->
@@ -243,63 +241,65 @@
 
     <!-- Netlify Identity script -->
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const authContainer = document.getElementById('auth-container');
-        const authButton = document.getElementById('auth-button');
-  
-        // Initialize Netlify Identity
-        netlifyIdentity.init();
-  
-        // Function to handle UI updates
-        const updateUI = (user) => {
-          if (user) {
-            // User is logged in
-            authContainer.innerHTML = `
-              <p>Welcome, ${user.email}</p>
-              <button id="auth-button">Logout</button>
-            `;
-          } else {
-            // User is logged out
-            authContainer.innerHTML = `
-              <button id="auth-button">Login</button>
-            `;
-          }
-  
-          // Re-attach event listener to the button
-          document.getElementById('auth-button').addEventListener('click', handleAuthentication);
-        };
-  
-        // Handle authentication button click
-        const handleAuthentication = () => {
-          const currentUser = netlifyIdentity.currentUser();
-  
-          if (currentUser) {
-            // If logged in, logout
-            netlifyIdentity.logout();
-          } else {
-            // If not logged in, open login modal
-            netlifyIdentity.open();
-          }
-        };
-  
-        // Listen for login events
-        netlifyIdentity.on('login', (user) => {
-          updateUI(user);
-          netlifyIdentity.close(); // Close identity modal
-        });
-  
-        // Listen for logout events
-        netlifyIdentity.on('logout', () => {
-          updateUI(null);
-        });
-  
-        // Optional: Check if user is already logged in
-        const currentUser = netlifyIdentity.currentUser();
-        updateUI(currentUser);
-  
-        // Attach click event listener
-        authButton.addEventListener('click', handleAuthentication);
-      });
+    document.addEventListener('DOMContentLoaded', () => {
+  const authContainer = document.getElementById('auth-container');
+  const authButton = document.getElementById('auth-button');
+
+  // Initialize Netlify Identity
+  netlifyIdentity.init();
+
+  // Function to handle UI updates
+  const updateUI = (user) => {
+    if (user) {
+      // User is logged in
+      authContainer.innerHTML = `
+        <p>Welcome, ${user.email}</p>
+        <button id="logout-button">Logout</button>
+      `;
+      // Re-attach event listener for logout button
+      document.getElementById('logout-button').addEventListener('click', handleAuthentication);
+    } else {
+      // User is logged out
+      authContainer.innerHTML = `
+        <button id="auth-button">Login</button>
+      `;
+      // Re-attach event listener for login button
+      document.getElementById('auth-button').addEventListener('click', handleAuthentication);
+    }
+  };
+
+  // Handle authentication button click
+  const handleAuthentication = () => {
+    const currentUser = netlifyIdentity.currentUser();
+
+    if (currentUser) {
+      // If logged in, logout
+      netlifyIdentity.logout();
+    } else {
+      // If not logged in, open login modal
+      netlifyIdentity.open();
+    }
+  };
+
+  // Listen for login events
+  netlifyIdentity.on('login', (user) => {
+    updateUI(user);
+    netlifyIdentity.close(); // Close identity modal
+  });
+
+  // Listen for logout events
+  netlifyIdentity.on('logout', () => {
+    updateUI(null);
+  });
+
+  // Optional: Check if user is already logged in
+  const currentUser = netlifyIdentity.currentUser();
+  updateUI(currentUser);
+
+  // Attach click event listener to login/logout button
+  authButton.addEventListener('click', handleAuthentication);
+});
+
     </script>
   
 </body>

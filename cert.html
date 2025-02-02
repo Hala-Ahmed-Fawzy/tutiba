@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Most Comprehensive Skin and Hair Care Diploma">
+    <meta property="og:url" content="https://app.netlify.com/sites/dr-aya-elbrashy-skin-and-hair-diploma/">
+    <meta property="og:image" content="https://dr-aya-elbrashy-cosmetics-education.netlify.app/backss.jpg">
+    <meta property="og:description" content="Dr.Aya ElBrashy Skin and Hair Care Diploma Learning Platform">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="aya.css" as="style" />
+    <link rel="stylesheet" href="aya.css">
+    <script src="https://kit.fontawesome.com/96f8243717.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Download Certificate</title>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.js">
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #dfd4f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        } */
+
+        button:hover {
+            background-color: #cde9f3;
+        }
+
+        button:disabled {
+            background-color: #aaaaaa;
+            cursor: not-allowed;
+        }
+
+        .center-container {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* .download-button { */
+            background-color: #260471;
+            /* Specific background color for download button */
+            color: white;
+            /* Text color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img id="logo" src="images/logo.png" alt="logo" width="35%"><br><br>
+        <h1 class="title">The Most Comprehensive Diploma<br>in Skincare and Hair Care</h1>
+        <span class="title span">Follow Us:</span>
+        <button id="contact-us-button"><a href="https://www.facebook.com/Dr.Aya.Elbrashy?mibextid=gik2fB"
+                class="contact-us" target="_blank"><i class="fa-brands fa-facebook"></i></a></button>
+        <button id="facebook-link"><a href="https://facebook.com/groups/294701005893722/" target="_blank"><i
+                    class="fa-solid fa-people-roof"></i></a></button>
+        <button id="YouTube-link"><a href="https://youtube.com/@drayaelbrashy4974?si=cPnAH6f3UFJIC31I"
+                target="_blank"><i class="fa-brands fa-youtube"></i></a></button>
+        <button id="instagram-link"><a href="https://www.instagram.com/dr.aya.elbrashy/" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a></button>
+        <button id="whatsapp-link"><a href="https://wa.me/+201065826509" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i></a></button>
+        <button id="linkedin-link"><a
+                href="https://www.linkedin.com/in/dr-aya-elbrashy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"><i class="fa-brands fa-linkedin"></i></a></button>
+        <button id="send-me-an-email-here"><a href="mailto:dr.aya.elbrashy@gmail.com" class="contact-me"
+                target="_blank"><i class="fa-solid fa-envelope"></i> Send Us an Email</a></button>
+    </div>
+
+    <div class="dropdown parts">
+        <button name="view diploma parts button" class="dropbtn download-button"><i class="fa-solid fa-angle-down"></i>
+            View Diploma Parts</button>
+        <div class="dropdown-content">
+            <a href="index.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to Main Page</a>
+            <a href="part1.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 1 of the
+                diploma</a>
+            <a href="part2.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 2 of the
+                diploma</a>
+            <a href="part3.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 3 of the
+                diploma</a>
+        </div>
+    </div>
+
+    
+
+    <div class="center-container">
+        <h1 class="cert">&#127881; Download Your Certificate &#127881;</h1>
+        <p>Enter your name and the password below, then click "Download Certificate" to get your personalized PDF
+            certificate.</p>
+        <p><strong><mark>Note: You are only allowed to download your certificate once!</mark><br> Make sure to type your
+                name correctly before downloading.</strong> </p>
+        <input type="text" id="nameInput" placeholder="Enter your name"><br>
+        <input type="password" id="passwordInput" placeholder="Enter password"><br>
+        <button id="downloadButton" class="download-button" onclick="verifyPassword()">Download Certificate</button>
+    </div>
+
+    <script>
+        const correctPassword = "i.passed"; // Set the correct password here
+        // Check if the certificate has already been downloaded
+        window.onload = function () {
+            if (localStorage.getItem('certificateDownloaded') === 'true') {
+                const button = document.getElementById('downloadButton');
+                button.disabled = true;
+                button.textContent = "Download Completed";
+            }
+        };
+        function verifyPassword() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === correctPassword) {
+                generatePDF();
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+
+        async function generatePDF() {
+            const name = document.getElementById('nameInput').value.trim();
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+
+            const button = document.getElementById('downloadButton');
+            button.disabled = true;
+            button.textContent = "Download Completed";
+
+            try {
+                const url = 'ayacerts.pdf';
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Failed to load PDF file: ${response.status} ${response.statusText}`);
+                }
+                const existingPdfBytes = await response.arrayBuffer();
+                const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+                const pages = pdfDoc.getPages();
+                const firstPage = pages[0];
+
+                const font = await pdfDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+                const nameX = 275;
+                const nameY = 200;
+
+                // Add Name
+                firstPage.drawText(name, {
+                    x: nameX,
+                    y: nameY,
+                    size: 40,
+                    color: PDFLib.rgb(0, 0, 0),
+                });
+
+                // Add Date
+                const currentDate = new Date().toLocaleDateString();
+                const dateX = 430;
+                const dateY = 70;
+
+                firstPage.drawText(currentDate, {
+                    x: dateX,
+                    y: dateY,
+                    size: 20,
+                    color: PDFLib.rgb(0, 0, 0),
+                });
+
+                const pdfBytes = await pdfDoc.save();
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = `certificate_${name}.pdf`;
+                link.click();
+                localStorage.setItem('certificateDownloaded', true); // Mark the certificate as downloaded
+
+
+                localStorage.setItem('certificateDownloaded', true);
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+                alert('An error occurred while generating the PDF. Please try again.');
+            }
+        }
+    </script>
+
+    <footer>
+        <u>Follow Us:</u>
+
+
+        <p><a href="https://www.facebook.com/Dr.Aya.Elbrashy?mibextid=gik2fB" target="_blank" class="footer-links"><i
+                    class="fa-brands fa-facebook"></i> Follow our Facebook Page</a></p>
+        <p><a href="https://facebook.com/groups/294701005893722/" target="_blank" class="footer-links"><i
+                    class="fa-solid fa-people-roof"></i> Join our Facebook Group</a></p>
+        <p><a href="https://youtube.com/@drayaelbrashy4974?si=cPnAH6f3UFJIC31I" target="_blank" class="footer-links"><i
+                    class="fa-brands fa-youtube"></i> Subscribe to our YouTube Channel</a></p>
+        <p><a href="https://www.instagram.com/dr.aya.elbrashy/" target="_blank" class="footer-links"><i
+                    class="fa-brands fa-instagram"></i> Follow us on Instagram</a></p>
+        <p><a href="https://wa.me/+201065826509" target="_blank" class="footer-links"><i
+                    class="fa-brands fa-whatsapp"></i> Contact us on WhatsApp</a></p>
+        <p><a href="https://www.linkedin.com/in/dr-aya-elbrashy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="footer-links"><i class="fa-brands fa-linkedin"></i> Connect with us on
+                LinkedIn</a></p>
+        <p><a href="mailto:dr.aya.elbrashy@gmail.com" target="_blank" class="footer-links"> <i
+                    class="fa-solid fa-envelope"></i> dr.aya.elbrashy@gmail.com </a></p>
+
+        <p class="float-right hala">Made with &#10084; by coder Hala</p>
+        <p class="float-right"><a href="mailto:coderhala@gmail.com" target="_blank" class="footer-links">
+                coderhala@gmail.com</a></p>
+        <p class="float-right"><a href="https://wa.me/+20115545667" target="_blank" class="footer-links"><i
+                    class="fa-brands fa-whatsapp"></i> +20115545667</a></p>
+    </footer>
+</body>
+
+</html>

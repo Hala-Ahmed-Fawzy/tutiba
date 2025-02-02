@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tutiba Home </title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="preload" href="aya.css" as="style" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="aya.css">
+    <style>
+      * {box-sizing: border-box}
+      body {font-family: Verdana, sans-serif; margin:0}
+      .mySlides {display: none}
+      .slideText {vertical-align: middle; }
+      
+      /* Slideshow container */
+      .slideshow-container { box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        position: relative;
+        margin: auto;
+        background-color: rgb(235, 232, 229);
+        padding: 40px;
+      }
+      
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev{
+        left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(136, 134, 134, 0.8);
+      }
+      
+     
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #a5a4a4;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active, .dot:hover {
+        background-color: rgba(0,0,0,0.8);;
+      }
+      
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
+      </style>
+    <script src="https://kit.fontawesome.com/96f8243717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <article class="headers">   
+       
+<span onclick="openNav()"style="font-size: var(--step-0);" ><i class="fa fa-bars" aria-hidden="true"></i>  Course Catalog</span>
+        <div class="logos"> <img src="backgrounds/logo.jpg" alt="Logo"></div>
+        </div>  
+     
+    </article>
+<!-- The overlay navbar -->
+<div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="index.html"target="_blank">Home</a>
+      <a href="cosmetics.html"target="_blank">Cosmetics</a>
+      <div class="dropdown" ><a href="#">Nutrition</a><div class="dropdown-content"style="right: 0;">
+        <p style="background-color: rgb(78, 46, 17);color: white;padding: 0px 5px;"> Coming Soon!</p>
+        </div></div>
+        <div class="dropdown" ><a href="#">Physical Therapy</a><div class="dropdown-content"style="right: 0;">
+        <p style="background-color: rgb(78, 46, 17);color: white;padding: 0px 5px;"> Coming Soon!</p>
+        </div></div>
+    </div>
+  
+  </div>
+  
+  <!-- Use any element to open/show the overlay navigation menu -->
+  
+
+    <section class="hero">
+        <div class="hero-content">
+          <h1 style="color: white;">Welcome to Your Learning Journey</h1>
+          <h2 style="color: white;">Choose from our courses and learn at your own pace.</h2>
+        </div>
+        <div class="social">
+           
+          <div class="social-icons"> 
+            <button id="send-me-an-email-here"><a href="mailto:tutiba.info@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> Send Us an Email</a></button>
+          </div>
+        </div>
+      </section>
+      <div  class= "tutiba">
+      <h2 style="margin: 0 auto;text-align: center;font-size: clamp(1.512rem, 1.1069rem + 2.0253vw, 2.9297rem);color: rgb(3, 3, 146);"> Welcome to Tutiba</h2><br>
+<p> At Tutiba, we are committed to empowering learners like you to achieve their goals and unlock their full potential. Whether you're advancing your career, exploring a new field, or acquiring skills to stay ahead in a competitive market, our expertly crafted courses are designed to meet your needs.</p><br><br>
+<div class="stats-container">
+    <p><i class="fa fa-users" aria-hidden="true"></i>&nbsp; &nbsp;1000+ Students</p>
+    <p><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp; &nbsp;8+ courses</p>
+    <p><i class="fa fa-book" aria-hidden="true"></i>&nbsp;&nbsp;200+ hours</p>
+    </div><br><br>
+    <p style="color: rgb(3, 3, 146);font-size:var(--step-2);"><strong>Why Choose Us?</strong> 
+        </p><br>
+<p ><strong> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></strong> 
+<strong>Industry-Driven Curriculum:</strong></p> Our courses are developed by leading professionals, ensuring you gain practical, real-world knowledge and skills.</p>
+<p><strong><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Flexible Learning Options:</strong> Learn at your own pace with our online modules, or join live sessions for real-time interaction with instructors and peers.</p>
+<p><strong><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Recognized Certifications:</strong> Earn certifications that hold value and credibility in your industry.</p>
+<p><strong><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Comprehensive Support:</strong> Benefit from dedicated support throughout your learning journey, including one-on-one mentorship, forums, and career guidance.</p><br>
+<h2 style="margin: 0 auto;text-align: center;font-size:var(--step-2);color: rgb(3, 3, 146); "> <strong>Explore Our Courses  
+</strong></h2><br>
+At Tutiba, we're committed to empowering your journey with knowledge and skills. Currently, we offer specialized <strong>Cosmeceutical (Skin and Hair)</strong> courses, helping you unlock the secrets of beauty and care.  
+<br>
+<p style="color: rgb(3, 3, 146)";></p><i class="fas fa-star" style="color: gold;"></i><strong>  Coming Soon to Tutiba:</strong></p> 
+ <p>- <strong>Nutrition and Wellness</strong>: Dive into the essentials of health and balanced living.</p>  
+<p>- <strong>Medical and Physical Therapy</strong>: Advance your expertise in therapeutic practices.</p>  
+<p>- <strong>In-Demand Tech Skills</strong>: Master programming, data science, and more to stay ahead in the digital world.</p>  
+<p>- <strong>And so much more!</strong></p>
+
+Stay tuned as we expand our offerings to fuel your passions and career aspirations.&nbsp;<i class="fas fa-rocket" style="color: rgb(172, 7, 60);"></i><br><br>
+
+<h2 style="margin: 0 auto;text-align: center;font-size:var(--step-2);color: rgb(3, 3, 146);"> <strong>Opinion of Some of Our Students</strong></h2><br>
+
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="font-family: Tahoma, Arial, sans-serif;text-align: center;direction: rtl;">"من مبدأ انه  لا يشكر الله من لا يشكر الناس حابة دكتورة اتشكرك على الدورة الأكثر من رائعة ، شرح واضح ومفصل معلومات قيمّة  مستحيل الاقي  دورات عنا بتنعرض بهاد الشكل .
+      وكمان شكرا على صدقك وطيب معاملتك  
+      وانا سعيدة جدا انه التقيت فيك وتشرفت بمعرفتك   ❤"</p>
+    <h4 style="text-align: center;">- Jinan Sakhen</h4>
+    </div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="font-family: Tahoma, Arial, sans-serif;text-align: center;direction: rtl;">"د. آيه انا خلصت المحاضره الوقتي 
+      جزاكي الله كل خير ونفع بك من الكورسات اللي استفدت منها جدا جدا وغيرت شغلي كتير بعلم حقيقي ونافع 
+      
+      اتمني اكون مع حضرتك في اي كورس تاني ومحتوي جديد 
+      زادك الله علما ♥️"</p>
+    <h4 style="text-align: center;">- Dalia Fadil</h4>
+    </div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="text-align: center;direction: rtl;">"Honestly! I benefited a lot, the information is valuable, the explanation is clear and understandable, and the method of explanation is very wonderful. I say it honestly, only the lucky ones are those who have such a course.
+      "</p>
+    <h4 style="text-align: center;">- Zahraa Hussein Neamah</h4>
+   </div>
+  </div>
+  
+
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="font-family: Tahoma, Arial, sans-serif; text-align: center;direction: rtl;">"مشكورة حبيبتي الغاليه دكتورة ايه كنتي رائعه بكل معلوماتك وشرحك وجدا استفاديت منك..اتمنالك كل الموفقيه والرقي والف تحية الك مني من العراق ابعثها بباقات ورد إلى مصر الحبيبه...واكيد اني رح اكون بكل الدبلومات الي حضرتك تقدميها 🥰😘
+      "</p>
+    <h4 style="text-align: center;">- Tamarah Abbas Allawi</h4>
+    </div>
+  </div>
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="text-align: center;">"Nice course with adequate information . Easily explained . lot of slides with good image quality
+      "</p>
+    <h4 style="text-align: center;">- DR. MAHTAB HOSSAIN</h4>
+   
+   </div>
+  </div>
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="font-family: Tahoma, Arial, sans-serif;text-align: center;direction: rtl;">"اهم شئ فالدبلومة هو ترتيب المحتوى بشذل يخليك فاهم
+      رغم انى لسة مخلصتش نص الدبلومة بس مستمتع و متنور اخيرا الحمد لله 😍♥️
+      شكرا على المجهود يا دكتورة بارك الله فيكى
+      "</p>
+    <h4 style="text-align: center;">- Eman Farooq</h4>
+   </div>
+  </div>
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="text-align: center;">"very good I`m starting my cosmetics business and I really like this course you helped me a lot thank you very much
+      "</p>
+    <h4 style="text-align: center;">- Neven Ahmed</h4>
+    </div>
+  </div>
+  <div class="mySlides fade">
+    <div class="slideText">
+    <p style="text-align: center;">"I really loved it. It is really amazing. I loved how you explain everything and then gives products formulations just amazing. And ofcourse I am gonna connect you through every course of yours for sure!
+      "</p>
+    <h4 style="text-align: center;">- Kulsum Baig</h4>
+    </div>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span> 
+    <span class="dot" onclick="currentSlide(8)"></span>  
+  </div>
+
+      
+        
+   
+<h2 style="margin-top: 20px;color: rgb(3, 3, 146);font-size:var(--step-1);"><strong>Why Wait? Start Today!</strong></h2> 
+<p> The future belongs to those who invest in themselves. Join a community of ambitious learners and experienced professionals who are transforming their lives with Tutiba.</p> <br>
+
+<h2 style="color: rgb(172, 7, 60);margin: 0 auto;text-align: center;"> <strong>Enroll now and take the first step towards your success.</strong></h2> </div>
+
+    <main class="main-section">
+        <h2 style="font-size: var(--step-1);margin: 0 auto;text-align: center;padding: 30px;color: rgb(3, 3, 146)";>Explore Some of Our Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="course-preview"> 
+                        <img src="backgrounds/1.png" alt="Course" >
+                </div>
+                <div class="course-info">
+                    <h3>Skin and Hair Cair Diploma<br>Part 1</h3>
+                    <p>The most comprehensive diploma in skincare &amp; haircare</p>
+                 
+                    <a href="part1.html" target="_blank" class="btn">Preview This Course</a>
+                </div>
+            </div>
+            <!-- Add more course cards similarly -->
+            
+                <div class="course-card">
+                    <div class="course-preview">
+                            <img src="backgrounds/2.png" alt="Course">
+                    </div>
+                    <div class="course-info">
+                        <h3>Skin and Hair Cair Diploma<br>Part 2</h3>
+                        <p>The most comprehensive diploma in skincare &amp; haircare</p>
+                        
+                        <a href="part2.html"target="_blank" class="btn">Preview This Course</a>
+                    </div>
+                </div>
+                <!-- Another course-->
+               
+                    <div class="course-card">
+                        <div class="course-preview">
+                             <img src="backgrounds/3.png" alt="Course">
+                        </div>
+                        <div class="course-info">
+                            <h3>Skin and Hair Cair Diploma<br>Part 3</h3>
+                            <p>The most comprehensive diploma in skincare &amp; haircare</p>
+                          
+                            <a href="part3"target="_blank" class="btn">Preview This Course</a>
+                        </div>
+                    </div>
+                    <!-- Another course-->
+                    
+                        <div class="course-card">
+                            <div class="course-preview">
+                                
+                                    <img src="backgrounds/4.png" alt="Course">
+                            </div>
+                            <div class="course-info">
+                                <h3>Skincare for Stretch Marks, Cellulite &amp; Keratosis Pilaris</h3>
+                                <p>Master the science and treatment of stretch marks, cellulite, and keratosis pilaris with advanced
+
+                                    skincare solutions.</p>
+                              
+                                <a href="stretch-marks.html"target="_blank" class="btn">Preview This Course</a>
+                            </div>
+                        </div>
+                        <!-- Another course-->
+                        <div class="course-grid">
+                            <div class="course-card">
+                                <div class="course-preview">
+                                    
+                                        <img src="backgrounds/5.png" alt="Course">
+                                   
+                                </div>
+                                <div class="course-info">
+                                    <h3>The Complete Guide to Deodorant<br> &amp; Antiperspirant in Skincare</h3>
+                                    <p>Discover the Science, Skincare Benefits, and Effective Use of Deodorant and Antiperspirant Products in Sweat Control</p>
+                                   
+                                    <a href="deodorant.html" target="_blank"class="btn">Preview This Course</a>
+                                </div>
+                            </div>
+                            <!-- Another course-->   
+                           
+                                <div class="course-card">
+                                    <div class="course-preview">
+                                         <img src="backgrounds/6.png" alt="Course">
+                                    </div>
+                                    <div class="course-info">
+                                        <h3>Mastering Sensitive and Damaged Skin: Science to Practice</h3>
+                                        <p>Advanced Practices for Managing Various Types of Sensitive and Damaged Skin</p>
+                                      
+                                        <a href="sensitve-damaged-skin.html" target="_blank" class="btn">Preview This Course</a>
+                                    </div>
+                                </div>
+                                <!-- Another course-->     
+
+        </div>
+    </main>
+
+    <footer style="display:float:root;" > 
+        <u> Follow Us:</u>
+          <p ><a href="https://www.facebook.com/share/15gSW6kv6f/"  target="_blank"class="footer-links"><i class="fa-brands fa-facebook"></i> Follow our Facebook Page</a> <p>
+    
+          <p ><a href="https://facebook.com/groups/294701005893722/" target="_blank"class="footer-links"><i class="fa-solid fa-people-roof"></i> Join our Facebook Group</a> </p>
+    
+          <p ><a href="https://youtube.com/@drayaelbrashy4974?si=cPnAH6f3UFJIC31I" target="_blank" class="footer-links"><i class="fa-brands fa-youtube"></i> Subscribe to our YouTube Channel</a></p>
+    
+          <p ><a href="https://www.instagram.com/dr.aya.elbrashy/" target="_blank"class="footer-links"><i class="fa-brands fa-instagram"></i> Follow us on Instagram </a></p>
+    
+    <p ><a href="https://wa.me/+201065826509" target="_blank"class="footer-links"><i class="fa-brands fa-whatsapp"></i>  +201065826509</a></p>
+              <p ><a href="https://www.linkedin.com/in/dr-aya-elbrashy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"class="footer-links"><i class="fa-brands fa-linkedin"></i> Connect with us on LinkedIn</a></p>
+          <p ><a href="mailto:dr.aya.elbrashy@gmail.com"  target="_blank"class="footer-links"> <i class="fa-solid fa-envelope"></i> dr.aya.elbrashy@gmail.com </a></p>
+          
+          <p class="float-right">Made with &#10084; by coder Hala</p>
+          <p class="float-right"><a href="mailto:coderhala@gmail.com"  target="_blank" class="footer-links"> coderhala@gmail.com</a></p>
+          <p class="float-right"><a href="https://wa.me/+20115545667" target="_blank"class="footer-links"><i class="fa-brands fa-whatsapp"></i>  +20115545667</a></p>
+    </footer>
+
+    <script>/* Open when someone clicks on the span element */
+        function openNav() {
+          document.getElementById("myNav").style.width = "40%";
+        }
+        
+        /* Close when someone clicks on the "x" symbol inside the overlay */
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }</script>
+      
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+</body>
+</html>

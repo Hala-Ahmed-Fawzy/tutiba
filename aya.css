@@ -1,0 +1,321 @@
+@media only screen and (max-width: 600px) {
+    body p ul  {
+        font-size: 8px;
+    }
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1440,24,1.25,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  /* Step -3: 8.1019px → 12.288px */
+  --step--3: clamp(0.5064rem, 0.4316rem + 0.3738vw, 0.768rem);
+  /* Step -2: 9.7222px → 15.36px */
+  --step--2: clamp(0.6076rem, 0.507rem + 0.5034vw, 0.96rem);
+  /* Step -1: 11.6667px → 19.2px */
+  --step--1: clamp(0.7292rem, 0.5946rem + 0.6726vw, 1.2rem);
+  /* Step 0: 14px → 24px */
+  --step-0: clamp(0.875rem, 0.6964rem + 0.8929vw, 1.5rem);
+  /* Step 1: 16.8px → 30px */
+  --step-1: clamp(1.05rem, 0.8143rem + 1.1786vw, 1.875rem);
+  /* Step 2: 20.16px → 37.5px */
+  --step-2: clamp(1.26rem, 0.9504rem + 1.5482vw, 2.3438rem);
+  /* Step 3: 24.192px → 46.875px */
+  --step-3: clamp(1.512rem, 1.1069rem + 2.0253vw, 2.9297rem);
+  /* Step 4: 29.0304px → 58.5938px */
+  --step-4: clamp(1.8144rem, 1.2865rem + 2.6396vw, 3.6621rem);
+  /* Step 5: 34.8365px → 73.2422px */
+  --step-5: clamp(2.1773rem, 1.4915rem + 3.4291vw, 4.5776rem);
+}
+
+ html{box-sizing:border-box; margin:auto; }
+
+/* Style the dropdown button */
+.dropbtn {
+ background-color: #d1e3e6; /* Green */
+  border: none;
+  text-color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--step-0);
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: ##d1e3e6;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.row{display:flex;flex-wrap: wrap;}
+.dropdown {width:100%;align-content: space-around;
+  position: relative;
+  display: inline-block;
+}
+.parts{font-size: var(--step-0);}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: ##d1e3e6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {font-size:var(--step-0);
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {background-color:white;
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: ##d1e3e6;
+}
+
+*{ font-family:calibri ; }
+h2{font-size:var(--step-0)}
+p {font-size:var(--step-0)}
+div{
+  font-size: var(--step-0);
+}
+h1{font-size:var(--step-2);
+  font-weight: bold;
+  color: #020433;
+  /*text-shadow: 1px 1px 1px rgb(0, 0, 0);*/ }
+
+h3{font-size:var(--step-1);font-family:sans;!important;}
+.logo{
+	padding-top: 30px;
+	padding-bottom:5px;
+	text-align: center;
+  color:black;
+	/*background-color:#081e80;*/
+  
+  background-image: url('backss.jpg');border-radius:9px; /* Path to your background image */
+    
+  
+    background-size: cover;
+    background-position: center;
+	
+}
+    
+
+.ob{text-align:center;
+font-style:strong; font-size: var(--step-1);color:#081e80;}
+#learn{text-align:center;
+font-style:strong; font-size:var(--step-1);color:#081e80;}
+
+body{padding:10px;
+	border:solid #01000a 5px;
+	border-radius:20px;}
+  
+
+
+.topic{margin:0;padding:0;}
+
+.topic1{margin:0;padding:0; padding-left:50px;}
+
+ } .join {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  max-width: 100%;
+  overflow-x: auto;
+  
+  box-sizing: border-box;
+
+}
+
+.join a {
+  margin: 0 15px; /* Add space between images */
+}
+
+.join-img {
+  max-width: 30%; /* Set width of each image */
+}
+
+/* Optional: Adjust the size of the images for smaller screens */
+@media screen and (max-width: 768px) {
+  .join-img {
+    max-width: 100%; /* Make images take full width on smaller screens */
+  }
+}
+
+
+button {
+  background-color: #d1e3e6; /* Green */
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:var(--step--1);
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10%;
+}
+.video-div{padding-top:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  max-width: 100%; /* Ensure the video doesn't exceed its container's width */
+}
+section{padding-top: 30px;
+  padding-bottom:5px;
+  text-align: center;}
+
+
+/*for logo pulsation*/
+ @keyframes pulse{ 
+   0%{ transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+ }
+ 
+
+.join-img{ animation: pulse 3s ease-in-out infinite;
+  }
+
+
+/*styling  of see more/see less*/
+ .container {
+    width: 90%;
+    margin: 0 auto;
+    border:1px solid lightgray;border-radius:8px;
+   background-color:#e1e5eb;
+    padding: 20px;
+    position: relative;
+}
+
+.content {
+    max-height: 305px; /* Initial height of the content */
+    overflow: hidden; /* Hide overflow */
+    transition: max-height 0.5s ease; /* Smooth transition */
+}
+
+.toggle-checkbox {
+    display: none; /* Hide the checkbox */
+}
+
+.toggle-checkbox:checked ~ .content {overflow:auto;
+    max-height: 1000px;  Height when expanded 
+}
+
+/* Show the correct label based on the checkbox state */
+.toggle-label {
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.toggle-label.less {
+    display: none; /* Hide the "See less" label initially */
+}
+
+.toggle-checkbox:checked ~ .toggle-label.more {
+    display: none; /* Hide the "See more" label when expanded */
+}
+
+.toggle-checkbox:checked ~ .toggle-label.less {
+    display: block; /* Show the "See less" label when expanded */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 600px) {
+    .content {
+        max-height: 150px; /* Increase max-height for better visibility on mobile */
+    }
+
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .toggle-label {
+        font-size: var(--step-1); /* Adjust font size for better readability */
+    }
+}
+
+/*diploma centered page images*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  border-radius:8%;
+}
+table{margin:auto;}
+caption{font-style:bold;
+      font-size:var(--step-2);background-color: #06063d;color:white;
+
+}
+ table, th, td {
+  border: 3px solid lightgray;
+  border-collapse: collapse;
+  padding:4px;
+}
+th, td {
+  background-color: #e1e5eb;
+  border-style:ridgde ;text-align:center;
+}
+th {
+color: #d1062f;
+}
+
+table tr:nth-child(even) td{
+   background-color:white
+}
+
+footer{margin-top:20px;padding:5%;margin-bottom:20px;
+  background-color:#06063d;color:white;font-style:bold;
+      font-size:var(--step-1);
+}
+.footer-links{
+  color:white;
+font-size: var(--step--1);}
+  
+
+.float-right{text-align:right;}
+.pay{width:90%;margin:auto;background-color:lightgray;text-align:center;}
+
+/* to fix position of header */
+header {border-radius:9px;
+    position: fixed;
+    bottom: 0;
+   right:auto;
+   left:auto;
+    width: 100%;
+    background-color: lightgray;
+    color: #fff;
+   
+  } 
+
+  main {
+    margin-bottom: 100px; /* add some margin to the top of the main content */
+  }
+.hala{font-size: var(--step--1);}
+ .cert{ font-size: var(--step-0);}
+.span{font-size:var(--step-0) ;}

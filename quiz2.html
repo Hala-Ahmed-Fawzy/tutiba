@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Most Comprehensive Skin and Hair Care Diploma">
+<meta property="og:url" content="https://app.netlify.com/sites/dr-aya-elbrashy-skin-and-hair-diploma/">
+<meta property="og:image" content="https://dr-aya-elbrashy-cosmetics-education.netlify.app/backss.jpg">
+<meta property="og:description" content="Dr.Aya ElBrashy Skin and Hair Care Diploma Learning Platform">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="aya.css" as="style" />
+<link rel="stylesheet" href="aya.css">
+<script src="https://kit.fontawesome.com/96f8243717.js" crossorigin="anonymous"></script>
+<title>Dr.Aya ElBrashy Skin and Hair Care Diploma</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+    /* Hide the content initially */
+     .quiz-container {
+        display: none;
+    }
+    #password-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .quiz-container {
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ddd;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        max-width: 600px;
+    }
+    .quiz-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .quiz-container label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .quiz-container input[type="radio"] {
+        margin-right: 10px;
+    }
+    .quiz-container button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quiz-container button:hover {
+        background-color: #0056b3;
+    }
+    .quiz-result {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+<script>
+    function checkPassword() {
+        const enteredPassword = document.getElementById('password').value;
+        const correctPassword = 'i.am.ready.again'; // Replace 'YourPassword' with the actual password
+
+        if (enteredPassword === correctPassword) {
+            document.getElementById('password-container').style.display = 'none';
+            document.getElementById('content-container').style.display = 'block';
+            document.querySelector('.quiz-container').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+        } else {
+            alert('Incorrect password. Please try again.');
+        }
+    }
+
+    function submitQuiz(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    const quizForm = document.getElementById('quizForm');
+    const quizResult = document.getElementById('quizResult');
+    let score = 0;
+
+    // Define the correct answers
+    const answers = {
+        q1: 'b',
+        q2: 'b',
+        q3: 'a',
+        q4: 'c',
+        q5: 'c',
+        q6: 'a',
+        q7: 'a',
+        q8: 'a',
+        q9: 'a',
+        q10:'a'
+    };
+
+    // Calculate the score
+   /* for (let question in answers) {
+        const selectedAnswer = quizForm[question] ? quizForm[question].value : null;
+        if (selectedAnswer === answers[question]) {
+            score++;
+        }
+    }*/
+
+    // Display the result
+   // quizResult.textContent = `You scored ${score} out of ${Object.keys(answers).length}.`;
+
+    // Set the score in a hidden input (optional if needed)
+    /*const scoreInput = document.createElement('input');
+    scoreInput.type = 'hidden';
+    scoreInput.name = 'score';
+    scoreInput.value = score;
+    quizForm.appendChild(scoreInput);*/
+
+    // Now submit the form to Netlify
+    quizForm.submit();
+}
+// Add this script inside your existing <script> tags
+    let timeRemaining = 600; // 10 minutes in seconds
+
+function startTimer() {
+    const timerElement = document.getElementById('timer');
+    const interval = setInterval(() => {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+
+        timerElement.textContent = `Time Remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (timeRemaining <= 0) {
+            clearInterval(interval);
+            submitQuiz(); // Automatically submit the quiz when time is up
+        }
+
+        timeRemaining--;
+    }, 1000);
+}
+
+// Start the timer when the page loads
+window.onload = function() {
+    startTimer();
+};
+
+    
+</script>
+</head>
+<body>
+
+
+<div id="content-container">
+    <!-- Logo and Navigation -->
+    <div class="logo">
+        <img id="logo" src="images/logo.png" alt="logo" width="35%"><br><br>
+        <h1 class="title">The Most Comprehensive Diploma<br>in Skincare and Hair Care</h1>
+        <span class="span">Follow Us:</span>
+        <button id="contact-us-button"><a href="https://www.facebook.com/Dr.Aya.Elbrashy?mibextid=gik2fB" class="contact-us" target="_blank"><i class="fa-brands fa-facebook"></i></a></button>
+        <button id="facebook-link"><a href="https://facebook.com/groups/294701005893722/" target="_blank"><i class="fa-solid fa-people-roof"></i></a></button>
+        <button id="YouTube-link"><a href="https://youtube.com/@drayaelbrashy4974?si=cPnAH6f3UFJIC31I" target="_blank"><i class="fa-brands fa-youtube"></i></a></button>
+        <button id="instagram-link"><a href="https://www.instagram.com/dr.aya.elbrashy/" target="_blank"><i class="fa-brands fa-instagram"></i></a></button>
+        <button id="whatsapp-link"><a href="https://wa.me/+201065826509" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></button>
+        <button id="linkedin-link"><a href="https://www.linkedin.com/in/dr-aya-elbrashy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a></button>
+        <button id="send-me-an-email-here"><a href="mailto:dr.aya.elbrashy@gmail.com" class="contact-me" target="_blank"><i class="fa-solid fa-envelope"></i> Send Us an Email</a></button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="dropdown parts">
+        <button name="view diploma parts button" class="dropbtn"><i class="fa-solid fa-angle-down"></i> View Diploma Parts</button>
+        <div class="dropdown-content">
+            <a href="part1.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 1 of the diploma</a>
+            <a href="part2.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 2 of the diploma</a>
+            <a href="part3.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 3 of the diploma</a>
+            <a href="check_out.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to Payment Page</a>
+           
+        </div>
+    </div>
+
+    
+</div>
+<div id="password-container">
+    <h1>Enter Password to Access Exam</h1>
+    <input type="password" id="password" placeholder="Enter password">
+    <button onclick="checkPassword()">Submit</button>
+</div>
+<br>
+<!-- Quiz Section -->
+<div class="quiz-container">
+    <div id="timer"></div>
+
+    <h2>Quiz: Cosmeceutical Diploma Final Exam</h2>
+    <form id="quizForm" name="quizForm" method="POST" data-netlify="true" netlify>
+        <label>
+           Enter your Email:
+            <br>
+            <input type="email" name="email" required>
+        </label>
+     <br>
+      
+        <label>
+            1. Skin specific collagen:
+            <br><br>
+            <input type="radio" name="q1" value="a">A) Type 1 and type 2<br>
+            <input type="radio" name="q1" value="b">B) Type 1 and type 3<br>
+            <input type="radio" name="q1" value="c">C) Type 1 or type 4<br>
+        </label>
+        <br>
+        <label>
+            2. The best exfoliating acid for oily skin:
+            <br><br>
+            <input type="radio" name="q2" value="a">A) Alpha Hydroxy Acid such as Isis Pharma Glyco-A<br>
+            <input type="radio" name="q2" value="b">B) Beta Hydroxy Acid such as Bioderma Sebium gel gommant<br>
+            <input type="radio" name="q2" value="c">C) Poly Hydroxy Acid.<br>
+        </label>
+        <br>
+        <label>
+            3. The best exfoliating acid for dry skin:
+            <br><br>
+            <input type="radio" name="q3" value="a">A) Alpha Hydroxy Acid such as Isis Pharma Glyco-A.<br>
+            <input type="radio" name="q3" value="b">B)Beta Hydroxy Acid such as Bioderma Sebium gel gommant<br>
+            <input type="radio" name="q3" value="c">C) Poly Hydroxy Acid.<br>
+        </label>
+        <br>
+        <label>
+            4. Which of the following is correct regarding panthenol?
+            <br><br>
+            <input type="radio" name="q4" value="a">A) It is an acidic form. <br>
+            <input type="radio" name="q4" value="b">B) It is converted to vitamin B6. <br>
+            <input type="radio" name="q4" value="c">C) D-panthenol is the biologically active form. <br>
+        </label>
+        <br>
+        <label>
+            5. In case of oily skin prone to sensitivity, the moisturizer should contain
+            <br><br>
+            <input type="radio" name="q5" value="a">A) Moisturizing and pore-tightening ingredients.            <br>
+            <input type="radio" name="q5" value="b">B) Soothing and oil-reducing ingredients.            <br>
+            <input type="radio" name="q5" value="c">C) Moisturizing and soothing ingredients.            <br>
+        </label>
+        <br>
+        <label>
+            6. In order to treat blackheads, you should use:
+            <br><br>
+            <input type="radio" name="q6" value="a">A) A cleanser and an exfoliating product.            <br>
+            <input type="radio" name="q6" value="b">B) A cleanser and a topical antibiotic.            <br>
+            <input type="radio" name="q6" value="c">C) A topical antibiotic and an exfoliating product.            <br>
+        </label>
+        <br>
+        <label>
+            7. Wrinkles can be improved by:
+            <br><br>
+            <input type="radio" name="q7" value="a">A) Retinoids<br>
+            <input type="radio" name="q7" value="b">B) Niacinamide<br>
+            <input type="radio" name="q7" value="c">C) Vitamin C.            <br>
+        </label>
+        <br>
+        <label>
+           8. Dry Skin sunscreen:
+            <br><br>
+            <input type="radio" name="q8" value="a">A) La Roche Posay Anthelios Ultra Cream<br>
+            <input type="radio" name="q8" value="b">B) La Roche Posay Anthelios Ultra Gel Cream.<br>
+            <input type="radio" name="q8" value="c">C) IsIs Pharma UVEBLOCK fluid.            <br>
+        </label>
+        <br>
+        <label>
+            9. Permanent Hair Color such as::
+            <br><br>
+            <input type="radio" name="q9" value="a">A) Garnier Nutrisse Ultra Nourishing Color.<br>
+            <input type="radio" name="q9" value="b">B) L'Oreal Casting Creme Gloss Hair Dye.<br>
+            <input type="radio" name="q9" value="c">C) Henna..            <br>
+        </label>
+        <br>
+        <label>
+            10.Diffused Sudden hair loss due to thyroid imbalance can be treated by?:
+            <br><br>
+            <input type="radio" name="q10" value="a">A) Thyroid hormones adjustment<br>
+            <input type="radio" name="q10" value="b">B) Minoxidil.<br>
+            <input type="radio" name="q10" value="c">C) None of the above..            <br>
+        </label>
+        <br>
+        <button type="submit" onclick="submitQuiz(event)">Submit</button>
+
+    </form>
+    <div id="quizResult" class="quiz-result"></div>
+</div>
+
+<!-- Footer -->
+<footer style="display:float:root;">
+    <u> Follow Us:</u>
+    <p ><a href="https://www.facebook.com/Dr.Aya.Elbrashy?mibextid=gik2fB"  target="_blank"class="footer-links"><i class="fa-brands fa-facebook"></i> Follow our Facebook Page</a> <p>
+
+    <p ><a href="https://facebook.com/groups/294701005893722/" target="_blank"class="footer-links"><i class="fa-solid fa-people-roof"></i> Join our Facebook Group</a> </p>
+
+    <p ><a href="https://youtube.com/@drayaelbrashy4974?si=cPnAH6f3UFJIC31I" target="_blank" class="footer-links"><i class="fa-brands fa-youtube"></i> Subscribe to our YouTube Channel</a></p>
+
+    <p ><a href="https://www.instagram.com/dr.aya.elbrashy/" target="_blank"class="footer-links"><i class="fa-brands fa-instagram"></i> Follow us on Instagram </a></p>
+
+    <p ><a href="https://wa.me/+201065826509" target="_blank"class="footer-links"><i class="fa-brands fa-whatsapp"></i>  +201065826509</a></p>
+    <p ><a href="https://www.linkedin.com/in/dr-aya-elbrashy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"class="footer-links"><i class="fa-brands fa-linkedin"></i> Connect with us on LinkedIn</a></p>
+    <p ><a href="mailto:dr.aya.elbrashy@gmail.com"  target="_blank"class="footer-links"> <i class="fa-solid fa-envelope"></i> dr.aya.elbrashy@gmail.com </a></p>
+    
+    <p class="float-right hala">Made with &#10084; by coder Hala</p>
+    <p class="float-right"><a href="mailto:coderhala@gmail.com"  target="_blank" class="footer-links"> coderhala@gmail.com</a></p>
+    <p class="float-right"><a href="https://wa.me/+20115545667" target="_blank"class="footer-links"><i class="fa-brands fa-whatsapp"></i>  +20115545667</a></p>
+</footer>
+
+</body>
+</html>
+

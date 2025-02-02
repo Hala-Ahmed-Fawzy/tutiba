@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Most Comprehensive Skin and Hair Care Diploma">
+<meta property="og:url" content="https://app.netlify.com/sites/dr-aya-elbrashy-skin-and-hair-diploma/">
+<meta property="og:image" content="https://dr-aya-elbrashy-cosmetics-education.netlify.app/backss.jpg">
+<meta property="og:description" content="Dr.Aya ElBrashy Skin and Hair Care Diploma Learning Platform">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" href="aya.css" as="style" />
+<link rel="stylesheet" href="aya.css">
+<script src="https://kit.fontawesome.com/96f8243717.js" crossorigin="anonymous"></script>
+<title>Dr.Aya ElBrashy Skin and Hair Care Diploma</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<style>
+    /* Hide the content initially */
+     .quiz-container {
+        display: none;
+    }
+    #password-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .quiz-container {
+        margin: 20px auto;
+        padding: 20px;
+        border: 2px solid #ddd;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        max-width: 600px;
+    }
+    .quiz-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .quiz-container label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .quiz-container input[type="radio"] {
+        margin-right: 10px;
+    }
+    .quiz-container button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quiz-container button:hover {
+        background-color: #0056b3;
+    }
+    .quiz-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 8px; /*
+    .quiz-result {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+<script>
+    function checkPassword() {
+        const enteredPassword = document.getElementById('password').value;
+        const correctPassword = 'i.am.ready'; // Replace 'YourPassword' with the actual password
+
+        if (enteredPassword === correctPassword) {
+            document.getElementById('password-container').style.display = 'none';
+            document.getElementById('content-container').style.display = 'block';
+            document.querySelector('.quiz-container').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+        } else {
+            alert('Incorrect password. Please try again.');
+        }
+    }
+
+    function submitQuiz(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    const quizForm = document.getElementById('quizForm');
+    const quizResult = document.getElementById('quizResult');
+    let score = 0;
+
+    // Define the correct answers
+    const answers = {
+        q1: 'b',
+        q2: 'd',
+        q3: 'b',
+        q4: 'd',
+        q5: 'e',
+        q6: 'a',
+        q7: 'c',
+        q8: 'b',
+        q9: 'e',
+        q10:'e'
+    };
+
+    // Calculate the score
+   /* for (let question in answers) {
+        const selectedAnswer = quizForm[question] ? quizForm[question].value : null;
+        if (selectedAnswer === answers[question]) {
+            score++;
+        }
+    }
+
+    // Display the result
+   // quizResult.textContent = `You scored ${score} out of ${Object.keys(answers).length}.`;
+
+    // Set the score in a hidden input (optional if needed)
+    const scoreInput = document.createElement('input');
+    scoreInput.type = 'hidden';
+    scoreInput.name = 'score';
+    scoreInput.value = score;
+    quizForm.appendChild(scoreInput);*/
+
+    // Now submit the form to Netlify
+    quizForm.submit();
+}
+// Add this script inside your existing <script> tags
+    let timeRemaining = 900; // 15 minutes in seconds
+
+function startTimer() {
+    const timerElement = document.getElementById('timer');
+    const interval = setInterval(() => {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+
+        timerElement.textContent = `Time Remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (timeRemaining <= 0) {
+            clearInterval(interval);
+            submitQuiz(); // Automatically submit the quiz when time is up
+        }
+
+        timeRemaining--;
+    }, 1000);
+}
+
+// Start the timer when the page loads
+window.onload = function() {
+    startTimer();
+};
+
+    
+</script>
+</head>
+<body>
+
+
+
+<div id="content-container">
+    <!-- Logo and Navigation -->
+    <div class="logo">
+        <img id="logo" src="images/logo.png" alt="logo" width="35%"><br><br>
+        <h1 class="title">The Most Comprehensive Diploma<br>in Skincare and Hair Care</h1>
+        <span class="span">Follow Us:</span>
+        <button id="contact-us-button"><a href="https://www.facebook.com/Dr.Aya.Elbrashy?mibextid=gik2fB" class="contact-us" target="_blank"><i class="fa-brands fa-facebook"></i></a></button>
+        <button id="facebook-link"><a href="https://facebook.com/groups/294701005893722/" target="_blank"><i class="fa-solid fa-people-roof"></i></a></button>
+        <button id="YouTube-link"><a href="https://youtube.com/@drayaelbrashy4974?si=cPnAH6f3UFJIC31I" target="_blank"><i class="fa-brands fa-youtube"></i></a></button>
+        <button id="instagram-link"><a href="https://www.instagram.com/dr.aya.elbrashy/" target="_blank"><i class="fa-brands fa-instagram"></i></a></button>
+        <button id="whatsapp-link"><a href="https://wa.me/+201065826509" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></button>
+        <button id="linkedin-link"><a href="https://www.linkedin.com/in/dr-aya-elbrashy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a></button>
+        <button id="send-me-an-email-here"><a href="mailto:dr.aya.elbrashy@gmail.com" class="contact-me" target="_blank"><i class="fa-solid fa-envelope"></i> Send Us an Email</a></button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="dropdown parts">
+        <button name="view diploma parts button" class="dropbtn"><i class="fa-solid fa-angle-down"></i> View Diploma Parts</button>
+        <div class="dropdown-content">
+            <a href="part1.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 1 of the diploma</a>
+            <a href="part2.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 2 of the diploma</a>
+            <a href="part3.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to part 3 of the diploma</a>
+            <a href="check_out.html" target="_blank"><i class="fa-regular fa-pen-to-square"></i>Go to Payment Page</a>
+          
+        </div>
+    </div>
+
+    
+</div>
+<div id="password-container">
+    <h1>Enter Password to Access Exam</h1>
+    <input type="password" id="password" placeholder="Enter password" >
+    <button onclick="checkPassword()">Submit</button>
+</div>
+<!-- Quiz Section -->
+<div class="quiz-container">
+    <div id="timer"></div>
+
+    <h2>Cosmeceutical Diploma Final Exam</h2>
+    <form id="quizForm" name="quizForm" method="POST" data-netlify="true" netlify>
+        <label>
+            Enter your Email:
+            <br>
+            <input type="email" name="email" required>
+        </label>
+     <br>
+        <label>
+            1. 
+            You are searching for a product which can increase surface hydration. You come across a product whose  manufacturing company claims that  it used hyaluronic acid in large and small sizes. You investigate its ingredients list which shown in the picture below, to see if it is suitable. What is the size of the Sodium Hyaluronate in this product?<br>
+            <img src="image/quiz/1.png"  alt="section 7 image" class="center" width= "100%">
+            <br>
+            <input type="radio" name="q1" value="a">A) Small.<br>
+            <input type="radio" name="q1" value="b">B) Large.<br>
+            <input type="radio" name="q1" value="c">C) Large and small.<br>
+            <input type="radio" name="q1" value="d">D) Unclear.<br>
+        </label>
+        <br>
+        <label>
+            2. 
+            A woman who is very concerned about her appearance follows a healthy diet, but is still not satisfied with the appearance of her skin. She has tried using several collagen supplements, but is not satisfied with the result. She wants you to prescribe her a treatment which will really be effective.  In order for collagen supplements to benefit the skin as much as possible, they must be:
+            <br><br>
+            <input type="radio" name="q2" value="a">A) Type 1 and type 3 / Liquid / from chicken.<br>
+            <input type="radio" name="q2" value="b">B) Type 1 and type 2 / >5000 mg/ peptan<br>
+            <input type="radio" name="q2" value="c">C) Type 1 and 3 / liquid/ > 500 mg<br>
+            <input type="radio" name="q2" value="d">D) Type 1 or type 3 / marine / > 5000 mg<br>
+            <input type="radio" name="q2" value="e">E) The first and third answers are correct.<br>
+        </label>
+        <br>
+        <label>
+            3. 
+            The weather this summer is hotter than usual. A customer comes to your pharmacy complaining about her oily skin. She says that despite her using her cleanser regularly, her skin pores are clogged and won't clear up. Which of the following ingredients do you think may be helpful for her condition?
+            <br><br>
+            <input type="radio" name="q3" value="a">A) Beta hydroxy acid which is found in ISIS Pharma Glyco A.<br>
+            <input type="radio" name="q3" value="b">B) Salicylic acid which is found in Bioderma Sebium Gel Gommant.<br>
+            <input type="radio" name="q3" value="c">C) Alpha hydroxy acid which is found in Biodema Sebium Pore Refiner.<br>
+            <input type="radio" name="q3" value="d">D) The first and second answers are correct.<br>
+            <input type="radio" name="q3" value="e">E) The first and third answers are correct..<br>
+        </label>
+        <br>
+        <label>
+            4. 
+            Vitamin A derivatives are an important ingredient in many beauty products. However, they are not as effective in all cases. In your opinion, in which of the following case would vitamin A derivatives be more useful?
+            <br><br>
+            <input type="radio" name="q4" value="a">A) Retinol in wrinkle reduction.<br>
+            <input type="radio" name="q4" value="b">B) Retinyl ester in wrinkle reduction.<br>
+            <input type="radio" name="q4" value="c">C) Retinoic Acid in acne treatment.<br>
+            <input type="radio" name="q4" value="d">D) The first and third answers are correct.<br>
+            <input type="radio" name="q4" value="e">E) All of the above.<br>
+        </label>
+        <br>
+        <label>
+            5. 
+            Skin which is prone to sensitivity requires the use of moisturizing products with functional ingredients. Examine the ingredient list of the product below and identify the active ingredients in its composition.?
+            <img src="image/quiz/2.jpg"  alt="section 7 image" class="center" margin= "0" width= "100%" max-width="100%" >
+            <br><br>
+            <input type="radio" name="q5" value="a">A) Humectant<br>
+            <input type="radio" name="q5" value="b">B) Occlusive.<br>
+            <input type="radio" name="q5" value="c">C) Functional ingredients.<br>
+            <input type="radio" name="q5" value="d">D) The first and second answers are correct.<br>
+            <input type="radio" name="q5" value="e">E) All of the above.<br>
+        </label>
+        <br>
+        <label>
+            6.
+            A customer comes to you saying that she has always had very dry skin. She remembers as a child, being frequently taken to a pediatrician by her mother for the treatment of an eczema of her skin. Despite being older now and experimenting with several brands of moisturizers, she has not yet found a solution to her eczema-prone skin. Which of the following would you recommend? 
+            <br><br>
+            <input type="radio" name="q6" value="a">A) Uriage Xemose lipid Replenishing Cerat.<br>
+            <input type="radio" name="q6" value="b">B) Avene Cleanance Hydra.<br>
+            <input type="radio" name="q6" value="c">C) La Roche Posay Lipikar Fluid.<br>
+            <input type="radio" name="q6" value="d">D) The first and third answers are correct.<br>
+            <input type="radio" name="q6" value="e">E) Non of the above.<br>
+        </label>
+        <br>
+        <label>
+            7. 
+            A young man, after being treated from acne by his dermatologist,  was disturbed by the residual hyperpigmentation. He used an OTC whitening product, but found no improvement. He has a job interview coming up and is concerned about his appearance. He comes asking for your advice. Any of the following can be recommended in his case except:
+            <br><br>
+            <input type="radio" name="q7" value="a">A) AHA as Isis pharma Glyco A.<br>
+            <input type="radio" name="q7" value="b">B) Topical vitamin A as adapalene.<br>
+            <input type="radio" name="q7" value="c">C) Hydroquinone<br>
+            <input type="radio" name="q7" value="d">D) Salicylic acid as The ordinary Salicylic acid solution<br>
+            <input type="radio" name="q7" value="e">E) The third and fourth answers are correct.<br>
+        </label>
+        <br>
+        8.
+        This case is treated using:
+        <br><br>
+        <img src="image/quiz/4.jpg"  alt="section 7 image" class="center">
+        <br>
+        <input type="radio" name="q8" value="a">A) Cleaner, mild exfoliation and topical antibiotics.<br>
+        <input type="radio" name="q8" value="b">B) Cleanser and mild exfoliation.<br>
+        <input type="radio" name="q8" value="c">C) Iso Tretinoin.<br>
+        <input type="radio" name="q8" value="d">D) Oral Antibiotics.<br>
+        <input type="radio" name="q8" value="e">E) Non of the above.<br>
+    </label>
+    <br>
+    9.
+   A middle-aged woman notices that wrinkles are starting to appear on her face and hands. She feels that her skin is aging quickly and wants an effective treatment for her wrinkles. Which of the following products would you recommend?
+    <br><br>
+    <input type="radio" name="q9" value="a">A) Topical retinoids.<br>
+    <input type="radio" name="q9" value="b">B) Collagen supplements.<br>
+    <input type="radio" name="q9" value="c">C) Hyaluronic Acid serums.<br>
+    <input type="radio" name="q9" value="d">D) All of the above.<br>
+    <input type="radio" name="q9" value="e">E) All of the above except the third answer.<br>
+</label>
+<br>
+10.
+A patient with thyroid imbalance comes to your pharmacy complaining to you about sudden hair loss. This is very disturbing for her and she impatiently asks you for a solution. What do you recommend? 
+<br><br>
+<input type="radio" name="q10" value="a">A) Adjustment of her thyroid hormone treatment<br>
+<input type="radio" name="q10" value="b">B) Ducray Neiptide.<br>
+<input type="radio" name="q10" value="c">C) Perfectil hair supplement.<br>
+<input type="radio" name="q10" value="d">D) The first and second answers are corrects.<br>
+<input type="radio" name="q10" value="e">E) The first and third answers are corrects.<br>
+</label><br>
+        
+        <button type="submit" onclick="submitQuiz(event)">Submit</button>
+
+    </form>
+    <div id="quizResult" class="quiz-result"></div>
+</div>
+
+<!-- Footer -->
+<footer style="display:float:root;">
+    <u> Follow Us:</u>
+    <p ><a href="https://www.facebook.com/Dr.Aya.Elbrashy?mibextid=gik2fB"  target="_blank"class="footer-links"><i class="fa-brands fa-facebook"></i> Follow our Facebook Page</a> <p>
+
+    <p ><a href="https://facebook.com/groups/294701005893722/" target="_blank"class="footer-links"><i class="fa-solid fa-people-roof"></i> Join our Facebook Group</a> </p>
+
+    <p ><a href="https://youtube.com/@drayaelbrashy4974?si=cPnAH6f3UFJIC31I" target="_blank" class="footer-links"><i class="fa-brands fa-youtube"></i> Subscribe to our YouTube Channel</a></p>
+
+    <p ><a href="https://www.instagram.com/dr.aya.elbrashy/" target="_blank"class="footer-links"><i class="fa-brands fa-instagram"></i> Follow us on Instagram </a></p>
+
+    <p ><a href="https://wa.me/+201065826509" target="_blank"class="footer-links"><i class="fa-brands fa-whatsapp"></i>  +201065826509</a></p>
+    <p ><a href="https://www.linkedin.com/in/dr-aya-elbrashy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"class="footer-links"><i class="fa-brands fa-linkedin"></i> Connect with us on LinkedIn</a></p>
+    <p ><a href="mailto:dr.aya.elbrashy@gmail.com"  target="_blank"class="footer-links"> <i class="fa-solid fa-envelope"></i> dr.aya.elbrashy@gmail.com </a></p>
+    
+    <p class="float-right hala">Made with &#10084; by coder Hala</p>
+    <p class="float-right"><a href="mailto:coderhala@gmail.com"  target="_blank" class="footer-links"> coderhala@gmail.com</a></p>
+    <p class="float-right"><a href="https://wa.me/+20115545667" target="_blank"class="footer-links"><i class="fa-brands fa-whatsapp"></i>  +20115545667</a></p>
+</footer>
+
+</body>
+</html>
+

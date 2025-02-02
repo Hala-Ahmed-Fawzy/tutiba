@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.headers {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: #333;
+    color: #fff;
+}
+.headers .logos {
+  flex: 1; /* Push the span to the left */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+}
+.logos img { 
+  width: 100px;  /* Default for larger screens */
+  max-width: 100%; /* Prevents overflow */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 50px; /* Makes it a circle */
+  margin-top: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) { 
+  .logos img {
+      width: 80px;  /* Slightly smaller for tablets */
+  }
+}
+
+@media (max-width: 480px) { 
+  .logos img {
+      width: 60px;  /* Smaller size for mobile */
+  }
+}
+
+.headers span {
+  position: absolute;
+  margin-right: auto; /* Ensure span stays on the left */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}.headers span:hover {
+  color: #00bcd4; /* Changes the text color */
+  background-color: #444; /* Adds a background color */
+  padding: 0.2rem 0.5rem; /* Adds padding for better hover effect */
+  border-radius: 5px; /* Rounds the edges of the background */
+  cursor: pointer; /* Changes the cursor to a pointer */
+}
+/* Hero Section */
+.hero {
+    opacity: 95%;
+    background-image: url('backgrounds/laptop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh; /* Set to 60% of the viewport height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  @media (max-width: 768px) { /* Tablets & Mobile */
+    .hero{
+      height: 40vh; /* Decrease height for smaller screens */
+    }
+  }
+  
+  /* @media (max-width: 480px) { 
+    .hero {
+      height: 30vh; 
+    }
+  } */
+  .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: auto;
+    margin-top: 30px;
+  }
+  
+  .social {
+    position: absolute;
+    bottom: 20px; /* Distance from the bottom of the hero section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to center */
+    text-align: center;
+  }
+  
+.main-section {
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 1rem); /* 2 cards per row on larger screens */
+  max-width: calc(50% - 1rem); /* Ensure consistent width for 2 cards */
+  box-sizing: border-box;
+}
+
+.course-preview {
+  width: 100%;
+  overflow: hidden;
+}
+
+.course-preview img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 1rem;
+}
+
+.course-info h3 {
+  margin-bottom: 0.5rem;
+  word-wrap: break-word; /* Ensures long text wraps */
+  overflow-wrap: break-word;
+}
+
+.course-info p {
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.course-info .price {
+  color: #e63946;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.course-info .btn {
+  background: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .course-card {
+      flex: 1 1 calc(50% - 1rem); /* 2 cards per row on laptops */
+      max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .course-card {
+      flex: 1 1 100%; /* 1 card per row on smaller screens */
+      max-width: 100%;
+  }
+}
+
+
+
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+.tutiba {
+  background-color: rgb(240, 240, 229);
+  padding: 100px;
+}
+
+@media (max-width: 768px) {
+  .tutiba {
+      padding: 30px;
+  }
+}
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows wrapping */
+  gap: 20px; /* Adds space between items */
+  margin: 0 auto; /* Center the container */
+}
+
+.stats-container p {
+  font-size: clamp(1.26rem, 0.9504rem + 1.5482vw, 2.3438rem);
+  color: rgb(3, 3, 146);
+  text-align: center;
+  margin: 0; /* Removes default paragraph margins */
+}
+
+
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .stats-container {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align items */
+  }
+
+  .stats-container p {
+      margin-bottom: 10px; /* Add spacing between stacked items */
+  }
+}
+
+
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(130, 125, 125); /* Black fallback color */
+  background-color: rgb(240, 231, 203); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: clamp(1.26rem, 0.9504rem + 1.5482vw, 2.3438rem);
+  color: white;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+  background-color: rgba(59, 58, 57, 0.919); /* Default background color */
+}
+
+/* Alternate background color for even links */
+.overlay a:nth-of-type(even) {
+  background-color: rgba(99, 62, 13, 0.655); 
+}
+.dropdown:nth-child(4) a {
+  background-color: rgba(99, 62, 13, 0.655); /* Highlight color for Physical Therapy */
+}
+/* When you mouse over the navigation links, change their color and background */
+.overlay a:hover, .overlay a:focus {
+  color: #4a4747;
+  background-color: rgba(255, 255, 255, 0.575); /* Highlight background on hover */
+}
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: clamp(1.26rem, 0.9504rem + 1.5482vw, 2.3438rem);
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}

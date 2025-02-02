@@ -172,7 +172,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .course-card { margin-bottom: 2rem;  margin-bottom: 2rem;
+  .course-card { margin-bottom: 2rem;
       flex: 1 1 100%; /* 1 card per row on smaller screens */
       max-width: 100%;
   }
